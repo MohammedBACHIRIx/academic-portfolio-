@@ -1,0 +1,17 @@
+{
+  "name": "Academic Portfolio",
+  "description": "A professional academic and industrial grade portfolio website.",
+  "repository": "https://github.com/MohammedBACHIRIx/academic-portfolio-",
+  "logo": "https://raw.githubusercontent.com/MohammedBACHIRIx/academic-portfolio-/main/public/favicon.svg",
+  "keywords": [
+    "portfolio",
+    "react",
+    "vite",
+    "express"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
