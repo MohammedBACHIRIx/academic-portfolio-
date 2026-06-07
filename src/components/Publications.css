@@ -1,0 +1,131 @@
+.publications-section {
+  padding: 6rem 0;
+  background-color: var(--bg-primary);
+}
+
+.publications-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pub-card {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border: 1px solid #E2E8F0;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 4px 4px 0 0 rgba(165, 28, 48, 0.05);
+}
+
+.pub-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.pub-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pub-title a:hover {
+  color: var(--accent);
+}
+
+.pub-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.pub-journal {
+  font-weight: 600;
+  color: #475569;
+}
+
+.pub-divider {
+  color: #CBD5E1;
+}
+
+.pub-abstract {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-left: 3px solid var(--accent);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.abstract-heading {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.pub-abstract p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.pub-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: auto;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 1.5rem;
+}
+
+.btn-abstract {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.btn-abstract:hover {
+  color: var(--accent);
+}
+
+.btn-doi {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn-doi:hover {
+  opacity: 0.8;
+}
