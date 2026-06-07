@@ -4,21 +4,27 @@ import './Timeline.css';
 const timelineData = [
   {
     year: '2022 - Present',
-    title: 'Ph.D. Researcher in Electrical Engineering',
-    institution: 'University of Technology',
-    description: 'Specializing in fuzzy logic control for isolated microgrids. Developed novel HIL simulation techniques for synchronous power converters.'
+    title: 'Ph.D. Researcher in Electrical Engineering & Microgrids',
+    institution: 'Doctoral Research',
+    description: 'Specializing in fuzzy logic control for isolated microgrids and developing novel HIL simulation techniques for synchronous power converters.'
   },
   {
-    year: '2019 - 2021',
-    title: 'M.Sc. in Power Electronics',
-    institution: 'Tech Institute',
-    description: 'Graduated with Honors. Thesis: "Design and Control of Hybrid AC/DC Microgrids for Rural Electrification".'
+    year: 'Dec 2019 - Dec 2021',
+    title: "Master's Degree in Automotive Embedded Systems",
+    institution: "Ecole Nationale Supérieure d'Informatique et d'Analyse des Systèmes (ENSIAS)",
+    description: "Specialized in Système Embarqué pour l'Automobile. Focus on embedded software and hardware for automotive applications."
   },
   {
-    year: '2015 - 2019',
-    title: 'B.Sc. in Electrical & Computer Engineering',
-    institution: 'State University',
-    description: 'Capstone Project: Hardware implementation of an MPPT tracking algorithm for solar panels.'
+    year: '2018 - 2019',
+    title: "Bachelor's Degree in Electrical Engineering",
+    institution: 'Université Mohammed Premier Oujda',
+    description: 'Licence professionnelle en Génie Électrique. Core studies in electrical systems, automation, and industrial electronics.'
+  },
+  {
+    year: '2016 - 2018',
+    title: 'University Diploma of Technology (DUT)',
+    institution: 'École Supérieure de Technologie - Université Mohammed Premier Oujda',
+    description: 'Specialized in Électronique et Informatique Industrielle (Electronics and Industrial IT).'
   }
 ];
 
