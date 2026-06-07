@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
@@ -12,9 +13,13 @@ const Projects = () => {
 
         <div className="projects-grid">
           {projectsData.map((project, index) => (
-            <div 
+            <motion.div 
               key={index}
               className="project-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="project-image-container">
                 <img src={project.image} alt={project.title} className="project-image" />
@@ -35,7 +40,7 @@ const Projects = () => {
                   View Details <ArrowRight size={16} />
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { BookOpen } from 'lucide-react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaGraduationCap } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
@@ -9,7 +10,12 @@ const Hero = () => {
   return (
     <section id="hero" className="hero-section">
       <div className="container hero-container">
-        <div className="hero-content">
+        <motion.div 
+          className="hero-content"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <p className="hero-greeting">
             Research Portfolio
           </p>
@@ -25,18 +31,24 @@ const Hero = () => {
           </p>
           
           <div className="hero-actions">
-            <a href="#projects" className="btn btn-primary">
+            <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="#projects" className="btn btn-primary">
               View My Work
-            </a>
-            <a href="#publications" className="btn btn-secondary">
+            </motion.a>
+            <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="#publications" className="btn btn-secondary">
               Publications
-            </a>
+            </motion.a>
           </div>
 
-          <div className="hero-socials">
+          <div className="hero-socials" style={{display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap'}}>
             <a href="https://www.linkedin.com/in/bachirimohammedx/" className="social-link" target="_blank" rel="noopener noreferrer"><FaLinkedin size={22} /></a>
-            <a href="https://www.researchgate.net/profile/Mohammed-Bachiri-2" className="social-link" target="_blank" rel="noopener noreferrer"><BookOpen size={22} /></a>
             <a href="#" className="social-link"><FaGithub size={22} /></a>
+            <div style={{width: '2px', height: '24px', backgroundColor: 'var(--border-color)', margin: '0 0.5rem'}}></div>
+            <a href="https://scholar.google.com/citations?user=x" className="btn btn-secondary" style={{padding: '0.4rem 0.8rem', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}} target="_blank" rel="noopener noreferrer">
+              <FaGraduationCap size={16} /> Google Scholar
+            </a>
+            <a href="https://orcid.org/0000-0000-0000-0000" className="btn btn-secondary" style={{padding: '0.4rem 0.8rem', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#A6CE39', borderColor: '#A6CE39'}} target="_blank" rel="noopener noreferrer">
+              ORCID
+            </a>
           </div>
 
           <div className="hero-metrics" style={{display: 'flex', gap: '2rem', marginTop: '2rem', borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem'}}>
@@ -53,11 +65,16 @@ const Hero = () => {
               <p style={{fontSize: '0.85rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold'}}>H-Index</p>
             </div>
           </div>
-        </div>
+        </motion.div>
         
-        <div className="hero-image-wrapper">
+        <motion.div 
+          className="hero-image-wrapper"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <img src="/abstract_avatar.png" alt="Mohammed Bachiri Abstract Avatar" className="hero-image" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

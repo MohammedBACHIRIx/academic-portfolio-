@@ -4,6 +4,8 @@ import Skills from '../components/Skills';
 import Timeline from '../components/Timeline';
 import Projects from '../components/Projects';
 import Publications from '../components/Publications';
+import News from '../components/News';
+import CVViewer from '../components/CVViewer';
 import Contact from '../components/Contact';
 
 const Home = () => {
@@ -14,6 +16,8 @@ const Home = () => {
       <Timeline />
       <Projects />
       <Publications />
+      <News />
+      <CVViewer />
       <Contact />
     </main>
   );
