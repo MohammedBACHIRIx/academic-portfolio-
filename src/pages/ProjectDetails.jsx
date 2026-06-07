@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { projectsData } from '../data/projectsData';
 import './ProjectDetails.css';
 
@@ -59,6 +60,35 @@ const ProjectDetails = () => {
                 <h2 className="content-heading">Key Findings</h2>
                 <p className="project-paragraph">{project.details.findings}</p>
               </section>
+
+              {project.chartData && (
+                <section className="detail-section">
+                  <h2 className="content-heading">Interactive Data Analysis</h2>
+                  <p className="project-paragraph" style={{marginBottom: '1rem', fontWeight: 'bold'}}>{project.chartLabel}</p>
+                  <div style={{ width: '100%', height: 350, border: '2px solid var(--border-color)', padding: '1rem' }}>
+                    <ResponsiveContainer width="100%" height="100%">
+                      <LineChart data={project.chartData}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip contentStyle={{backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)'}} />
+                        <Legend />
+                        {project.chartType === 'performance' ? (
+                          <>
+                            <Line type="monotone" dataKey="PID" stroke="#8996A0" strokeWidth={2} activeDot={{ r: 8 }} />
+                            <Line type="monotone" dataKey="Fuzzy" stroke="#A51C30" strokeWidth={3} />
+                          </>
+                        ) : project.chartType === 'tracking' ? (
+                          <>
+                            <Line type="stepAfter" dataKey="Physical" stroke="#8996A0" strokeWidth={2} />
+                            <Line type="stepAfter" dataKey="HIL" stroke="#A51C30" strokeDasharray="5 5" strokeWidth={3} />
+                          </>
+                        ) : null}
+                      </LineChart>
+                    </ResponsiveContainer>
+                  </div>
+                </section>
+              )}
 
               <section className="detail-section">
                 <h2 className="content-heading">Impact & Significance</h2>

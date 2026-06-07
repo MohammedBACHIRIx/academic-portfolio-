@@ -25,6 +25,15 @@ export const projectsData = [
       impact: 'Extends battery lifespan through optimized charge/discharge cycles and dramatically increases the resilience of sensitive DC microgrid components against power surges.',
       role: 'Algorithm Designer – Authored the fuzzy rule base, simulated the control loop in Simulink, and verified dynamic response parameters.'
     },
+    chartData: [
+      { name: 'Load Step 1', PID: 120, Fuzzy: 45 },
+      { name: 'Load Step 2', PID: 135, Fuzzy: 50 },
+      { name: 'Load Step 3', PID: 110, Fuzzy: 40 },
+      { name: 'Load Step 4', PID: 150, Fuzzy: 60 },
+      { name: 'Load Step 5', PID: 140, Fuzzy: 55 }
+    ],
+    chartType: 'performance',
+    chartLabel: 'Voltage Settling Time (ms) - Lower is Better',
     image: '/fuzzy_ems.png',
     tech: ['Fuzzy Logic', 'Energy Management', 'Control Systems', 'Simulink'],
     link: 'https://doi.org/10.1007/978-981-96-0644-3_26'
@@ -40,6 +49,16 @@ export const projectsData = [
       impact: 'Democratizes power electronics research by providing a safe, sub-$100 testing environment for complex control strategies before physical deployment.',
       role: 'Hardware Engineer – Derived state-space models, programmed the C2000 MCU, and conducted the comparative hardware validation.'
     },
+    chartData: [
+      { name: '0s', Physical: 0, HIL: 0 },
+      { name: '0.1s', Physical: 5.2, HIL: 5.1 },
+      { name: '0.2s', Physical: 10.5, HIL: 10.4 },
+      { name: '0.3s', Physical: 15.0, HIL: 14.9 },
+      { name: '0.4s', Physical: 14.8, HIL: 14.8 },
+      { name: '0.5s', Physical: 10.2, HIL: 10.3 }
+    ],
+    chartType: 'tracking',
+    chartLabel: 'Dynamic Tracking Response: Output Voltage (V)',
     image: '/hil_converter.png',
     tech: ['HIL Simulation', 'Power Electronics', 'Modeling', 'TMS320F28069M'],
     link: 'https://doi.org/10.1088/1755-1315/1598/1/012041'

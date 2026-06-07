@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem('theme') === 'dark';
+  });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDarkMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +47,13 @@ const Navbar = () => {
                 <a href={link.href} className="nav-link">{link.name}</a>
               </li>
             ))}
+            <li>
+              <button onClick={() => setIsDarkMode(!isDarkMode)} className="btn-icon theme-toggle" style={{color: 'var(--text-primary)', marginLeft: '1rem'}}>
+                {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            </li>
           </ul>
-          <a href="/#contact" className="btn btn-primary nav-cta">Let's Talk</a>
+          <a href="/#contact" className="btn btn-primary nav-cta" style={{marginLeft: '1.5rem'}}>Let's Talk</a>
         </nav>
 
         {/* Mobile Nav Toggle */}

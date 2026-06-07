@@ -38,6 +38,21 @@ const Hero = () => {
             <a href="https://www.researchgate.net/profile/Mohammed-Bachiri-2" className="social-link" target="_blank" rel="noopener noreferrer"><BookOpen size={22} /></a>
             <a href="#" className="social-link"><FaGithub size={22} /></a>
           </div>
+
+          <div className="hero-metrics" style={{display: 'flex', gap: '2rem', marginTop: '2rem', borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem'}}>
+            <div>
+              <h4 style={{fontSize: '1.8rem', color: 'var(--accent)', marginBottom: '0', fontFamily: 'var(--font-heading)'}}>5+</h4>
+              <p style={{fontSize: '0.85rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold'}}>Publications</p>
+            </div>
+            <div>
+              <h4 style={{fontSize: '1.8rem', color: 'var(--accent)', marginBottom: '0', fontFamily: 'var(--font-heading)'}}>12+</h4>
+              <p style={{fontSize: '0.85rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold'}}>Citations</p>
+            </div>
+            <div>
+              <h4 style={{fontSize: '1.8rem', color: 'var(--accent)', marginBottom: '0', fontFamily: 'var(--font-heading)'}}>3</h4>
+              <p style={{fontSize: '0.85rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold'}}>H-Index</p>
+            </div>
+          </div>
         </div>
         
         <div className="hero-image-wrapper">

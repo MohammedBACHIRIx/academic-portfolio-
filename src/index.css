@@ -25,6 +25,19 @@
   --font-mono: 'Public Sans', sans-serif;
 }
 
+.dark {
+  --bg-primary: #121212;
+  --bg-secondary: #1E1E1E;
+  --text-primary: #F5F5F5;
+  --text-secondary: #A0AAB2;
+  --text-light: #8996A0;
+  --accent: #E53935;
+  --accent-hover: #EF5350;
+  --accent-light: #2C3E50;
+  --border-color: #333333;
+  --glass-bg: #121212;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
